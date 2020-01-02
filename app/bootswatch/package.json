@@ -2,7 +2,7 @@
   "_args": [
     [
       "bootswatch@4.2.1",
-      "/Users/travistidwell/Desktop/formio.js"
+      "D:\\Project\\formiojs"
     ]
   ],
   "_development": true,
@@ -27,7 +27,7 @@
   ],
   "_resolved": "https://registry.npmjs.org/bootswatch/-/bootswatch-4.2.1.tgz",
   "_spec": "4.2.1",
-  "_where": "/Users/travistidwell/Desktop/formio.js",
+  "_where": "D:\\Project\\formiojs",
   "author": {
     "name": "Thomas Park"
   },

@@ -143,4 +143,11 @@ gulp.task('build', sync.sync([['clean'], 'babel', 'package-version', [
 ], 'dist']));
 
 // Default task. Build and watch.
-gulp.task('default', ['babel', 'scripts-full', 'watch']);
+gulp.task('default', sync.sync([['clean'], 'babel', [
+  'scripts-formio',
+  'scripts-utils',
+  'scripts-embed',
+  'scripts-contrib',
+  'scripts-form',
+  'scripts-full'
+], 'dist']));
