@@ -6,7 +6,7 @@ export default class RadioComponent extends BaseComponent {
     return BaseComponent.schema({
       type: 'radio',
       inputType: 'radio',
-      label: 'Radio',
+      label: 'zh'===localStorage.getItem('language')?'单选框':'Radio',
       key: 'radio',
       values: [{ label: '', value: '' }],
       fieldSet: false
@@ -15,7 +15,7 @@ export default class RadioComponent extends BaseComponent {
 
   static get builderInfo() {
     return {
-      title: 'Radio',
+      title: 'zh'===localStorage.getItem('language')?'单选框':'Radio',
       group: 'basic',
       icon: 'fa fa-dot-circle-o',
       weight: 80,

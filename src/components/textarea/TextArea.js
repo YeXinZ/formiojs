@@ -7,7 +7,7 @@ export default class TextAreaComponent extends TextFieldComponent {
   static schema(...extend) {
     return TextFieldComponent.schema({
       type: 'textarea',
-      label: 'Text Area',
+      label: 'zh'===localStorage.getItem('language')?'多行文本':'Text Area',
       key: 'textArea',
       rows: 3,
       wysiwyg: false,
@@ -17,7 +17,7 @@ export default class TextAreaComponent extends TextFieldComponent {
 
   static get builderInfo() {
     return {
-      title: 'Text Area',
+      title: 'zh'===localStorage.getItem('language')?'多行文本':'Text Area',
       group: 'basic',
       icon: 'fa fa-font',
       documentation: 'http://help.form.io/userguide/#textarea',

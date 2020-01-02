@@ -16,7 +16,7 @@ export default class HTMLComponent extends BaseComponent {
 
   static get builderInfo() {
     return {
-      title: 'HTML Element',
+      title: 'zh'===localStorage.getItem('language')?'HTML元素':'HTML Element',
       group: 'advanced',
       icon: 'fa fa-code',
       weight: 90,

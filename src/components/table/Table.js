@@ -34,7 +34,7 @@ export default class TableComponent extends NestedComponent {
 
   static get builderInfo() {
     return {
-      title: 'Table',
+      title: 'zh'===localStorage.getItem('language')?'表格':'Table',
       group: 'layout',
       icon: 'fa fa-table',
       weight: 40,

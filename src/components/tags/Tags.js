@@ -6,7 +6,7 @@ export default class TagsComponent extends BaseComponent {
   static schema(...extend) {
     return BaseComponent.schema({
       type: 'tags',
-      label: 'Tags',
+      label: 'zh'===localStorage.getItem('language')?'标签':'Tags',
       key: 'tags',
       delimeter: ',',
       storeas: 'string',
@@ -16,7 +16,7 @@ export default class TagsComponent extends BaseComponent {
 
   static get builderInfo() {
     return {
-      title: 'Tags',
+      title: 'zh'===localStorage.getItem('language')?'标签':'Tags',
       icon: 'fa fa-tags',
       group: 'advanced',
       documentation: 'http://help.form.io/userguide/#tags',

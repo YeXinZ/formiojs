@@ -6,7 +6,7 @@ export default class CheckBoxComponent extends BaseComponent {
     return BaseComponent.schema({
       type: 'checkbox',
       inputType: 'checkbox',
-      label: 'Checkbox',
+      label: 'zh'===localStorage.getItem('language')?'复选框':'Checkbox',
       key: 'checkbox',
       dataGridLabel: true,
       labelPosition: 'right',
@@ -17,7 +17,7 @@ export default class CheckBoxComponent extends BaseComponent {
 
   static get builderInfo() {
     return {
-      title: 'Checkbox',
+      title: 'zh'===localStorage.getItem('language')?'复选框':'Checkbox',
       group: 'basic',
       icon: 'fa fa-check-square',
       documentation: 'http://help.form.io/userguide/#checkbox',

@@ -3,7 +3,7 @@ import NestedComponent from '../nested/NestedComponent';
 export default class TabsComponent extends NestedComponent {
   static schema(...extend) {
     return NestedComponent.schema({
-      label: 'Tabs',
+      label: 'zh'===localStorage.getItem('language')?'标签页':'Tabs',
       type: 'tabs',
       input: false,
       key: 'tabs',
@@ -20,7 +20,7 @@ export default class TabsComponent extends NestedComponent {
 
   static get builderInfo() {
     return {
-      title: 'Tabs',
+      title: 'zh'===localStorage.getItem('language')?'标签页':'Tabs',
       group: 'layout',
       icon: 'fa fa-folder-o',
       weight: 50,

@@ -4,14 +4,14 @@ export default class PasswordComponent extends TextFieldComponent {
   static schema(...extend) {
     return TextFieldComponent.schema({
       type: 'password',
-      label: 'Password',
+      label: 'zh'===localStorage.getItem('language')?'密码':'Password',
       key: 'password'
     }, ...extend);
   }
 
   static get builderInfo() {
     return {
-      title: 'Password',
+      title: 'zh'===localStorage.getItem('language')?'密码':'Password',
       icon: 'fa fa-asterisk',
       group: 'basic',
       documentation: 'http://help.form.io/userguide/#password',

@@ -5,7 +5,7 @@ export default class TimeComponent extends TextFieldComponent {
   static schema(...extend) {
     return TextFieldComponent.schema({
       type: 'time',
-      label: 'Time',
+      label: 'zh'===localStorage.getItem('language')?'时间':'Time',
       key: 'time',
       inputType: 'time',
       format: 'HH:mm'
@@ -24,7 +24,7 @@ export default class TimeComponent extends TextFieldComponent {
 
   static get builderInfo() {
     return {
-      title: 'Time',
+      title: 'zh'===localStorage.getItem('language')?'时间':'Time',
       icon: 'fa fa-clock-o',
       group: 'basic',
       documentation: 'http://help.form.io/userguide/#time',

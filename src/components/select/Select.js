@@ -7,7 +7,7 @@ export default class SelectComponent extends BaseComponent {
   static schema(...extend) {
     return BaseComponent.schema({
       type: 'select',
-      label: 'Select',
+      label: 'zh'===localStorage.getItem('language')?'下拉选择':'Select',
       key: 'select',
       data: {
         values: [],
@@ -32,7 +32,7 @@ export default class SelectComponent extends BaseComponent {
 
   static get builderInfo() {
     return {
-      title: 'Select',
+      title: 'zh'===localStorage.getItem('language')?'下拉选择':'Select',
       group: 'basic',
       icon: 'fa fa-th-list',
       weight: 70,

@@ -5,7 +5,7 @@ export default class SelectBoxesComponent extends RadioComponent {
   static schema(...extend) {
     return RadioComponent.schema({
       type: 'selectboxes',
-      label: 'Select Boxes',
+      label: 'zh'===localStorage.getItem('language')?'选择框':'Select Boxes',
       key: 'selectBoxes',
       inline: false
     }, ...extend);
@@ -13,7 +13,7 @@ export default class SelectBoxesComponent extends RadioComponent {
 
   static get builderInfo() {
     return {
-      title: 'Select Boxes',
+      title: 'zh'===localStorage.getItem('language')?'选择框':'Select Boxes',
       group: 'basic',
       icon: 'fa fa-plus-square',
       weight: 60,

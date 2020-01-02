@@ -3,7 +3,7 @@ import NestedComponent from '../nested/NestedComponent';
 export default class FieldsetComponent extends NestedComponent {
   static schema(...extend) {
     return NestedComponent.schema({
-      label: 'Field Set',
+      label: 'zh'===localStorage.getItem('language')?'字段':'Field Set',
       key: 'fieldSet',
       type: 'fieldset',
       legend: '',
@@ -15,7 +15,7 @@ export default class FieldsetComponent extends NestedComponent {
 
   static get builderInfo() {
     return {
-      title: 'Field Set',
+      title: 'zh'===localStorage.getItem('language')?'字段':'Field Set',
       icon: 'fa fa-th-large',
       group: 'layout',
       documentation: 'http://help.form.io/userguide/#fieldset',

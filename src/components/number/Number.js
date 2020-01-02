@@ -8,7 +8,7 @@ export default class NumberComponent extends BaseComponent {
   static schema(...extend) {
     return BaseComponent.schema({
       type: 'number',
-      label: 'Number',
+      label: 'zh'===localStorage.getItem('language')?'数字':'Number',
       key: 'number',
       validate: {
         min: '',
@@ -21,7 +21,7 @@ export default class NumberComponent extends BaseComponent {
 
   static get builderInfo() {
     return {
-      title: 'Number',
+      title: 'zh'===localStorage.getItem('language')?'数字':'Number',
       icon: 'fa fa-hashtag',
       group: 'basic',
       documentation: 'http://help.form.io/userguide/#number',

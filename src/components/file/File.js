@@ -41,7 +41,7 @@ export default class FileComponent extends BaseComponent {
 
   static get builderInfo() {
     return {
-      title: 'File',
+      title: 'zh'===localStorage.getItem('language')?'文件':'File',
       group: 'advanced',
       icon: 'fa fa-file',
       documentation: 'http://help.form.io/userguide/#file',

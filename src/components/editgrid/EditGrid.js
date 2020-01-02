@@ -7,7 +7,7 @@ export default class EditGridComponent extends NestedComponent {
   static schema(...extend) {
     return NestedComponent.schema({
       type: 'editgrid',
-      label: 'Edit Grid',
+      label: 'zh'===localStorage.getItem('language')?'可编辑网格':'Edit Grid',
       key: 'editGrid',
       clearOnHide: true,
       input: true,
@@ -25,7 +25,7 @@ export default class EditGridComponent extends NestedComponent {
 
   static get builderInfo() {
     return {
-      title: 'Edit Grid',
+      title: 'zh'===localStorage.getItem('language')?'可编辑网格':'Edit Grid',
       icon: 'fa fa-tasks',
       group: 'data',
       documentation: 'http://help.form.io/userguide/#editgrid',

@@ -3,7 +3,7 @@ import NestedComponent from '../nested/NestedComponent';
 export default class PanelComponent extends NestedComponent {
   static schema(...extend) {
     return NestedComponent.schema({
-      label: 'Panel',
+      label: 'zh'===localStorage.getItem('language')?'面板':'Panel',
       type: 'panel',
       key: 'panel',
       title: '',
@@ -20,7 +20,7 @@ export default class PanelComponent extends NestedComponent {
 
   static get builderInfo() {
     return {
-      title: 'Panel',
+      title: 'zh'===localStorage.getItem('language')?'面板':'Panel',
       icon: 'fa fa-list-alt',
       group: 'layout',
       documentation: 'http://help.form.io/userguide/#panels',

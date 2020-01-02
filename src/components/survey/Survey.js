@@ -6,7 +6,7 @@ export default class SurveyComponent extends BaseComponent {
   static schema(...extend) {
     return BaseComponent.schema({
       type: 'survey',
-      label: 'Survey',
+      label: 'zh'===localStorage.getItem('language')?'调查':'Survey',
       key: 'survey',
       questions: [],
       values: []
@@ -15,7 +15,7 @@ export default class SurveyComponent extends BaseComponent {
 
   static get builderInfo() {
     return {
-      title: 'Survey',
+      title: 'zh'===localStorage.getItem('language')?'调查':'Survey',
       group: 'advanced',
       icon: 'fa fa-list',
       weight: 170,

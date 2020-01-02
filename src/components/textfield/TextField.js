@@ -4,7 +4,7 @@ import BaseComponent from '../base/Base';
 export default class TextFieldComponent extends BaseComponent {
   static schema(...extend) {
     return BaseComponent.schema({
-      label: 'Text Field',
+      label: 'zh'===localStorage.getItem('language')?'文本域':'Text Field',
       key: 'textField',
       type: 'textfield',
       mask: false,
@@ -27,7 +27,7 @@ export default class TextFieldComponent extends BaseComponent {
 
   static get builderInfo() {
     return {
-      title: 'Text Field',
+      title: 'zh'===localStorage.getItem('language')?'文本域':'Text Field',
       icon: 'fa fa-terminal',
       group: 'basic',
       documentation: 'http://help.form.io/userguide/#textfield',

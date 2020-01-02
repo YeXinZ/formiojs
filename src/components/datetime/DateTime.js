@@ -4,7 +4,7 @@ export default class DateTimeComponent extends BaseComponent {
   static schema(...extend) {
     return BaseComponent.schema({
       type: 'datetime',
-      label: 'Date / Time',
+      label: 'zh'===localStorage.getItem('language')?'日期/时间':'Date / Time',
       key: 'dateTime',
       format: 'yyyy-MM-dd hh:mm a',
       useLocaleSettings: false,
@@ -39,7 +39,7 @@ export default class DateTimeComponent extends BaseComponent {
 
   static get builderInfo() {
     return {
-      title: 'Date / Time',
+      title: 'zh'===localStorage.getItem('language')?'日期/时间':'Date / Time',
       group: 'advanced',
       icon: 'fa fa-calendar-plus-o',
       documentation: 'http://help.form.io/userguide/#datetime',

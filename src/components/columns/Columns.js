@@ -4,7 +4,7 @@ import NestedComponent from '../nested/NestedComponent';
 export default class ColumnsComponent extends NestedComponent {
   static schema(...extend) {
     return NestedComponent.schema({
-      label: 'Columns',
+      label: 'zh'===localStorage.getItem('language')?'列':'Columns',
       key: 'columns',
       type: 'columns',
       columns: [
@@ -22,7 +22,7 @@ export default class ColumnsComponent extends NestedComponent {
 
   static get builderInfo() {
     return {
-      title: 'Columns',
+      title: 'zh'===localStorage.getItem('language')?'列':'Columns',
       icon: 'fa fa-columns',
       group: 'layout',
       documentation: 'http://help.form.io/userguide/#columns',

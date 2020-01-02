@@ -4,7 +4,7 @@ export default class PhoneNumberComponent extends TextFieldComponent {
   static schema(...extend) {
     return TextFieldComponent.schema({
       type: 'phoneNumber',
-      label: 'Phone Number',
+      label: 'zh'===localStorage.getItem('language')?'电话号码':'Phone Number',
       key: 'phoneNumber',
       inputType: 'tel',
       inputMask: '(999) 999-9999'
@@ -13,7 +13,7 @@ export default class PhoneNumberComponent extends TextFieldComponent {
 
   static get builderInfo() {
     return {
-      title: 'Phone Number',
+      title: 'zh'===localStorage.getItem('language')?'电话号码':'Phone Number',
       group: 'advanced',
       icon: 'fa fa-phone-square',
       weight: 20,

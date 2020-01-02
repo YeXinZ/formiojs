@@ -6,7 +6,7 @@ export default class DayComponent extends BaseComponent {
   static schema(...extend) {
     return BaseComponent.schema({
       type: 'day',
-      label: 'Day',
+      label: 'zh'===localStorage.getItem('language')?'日期':'Day',
       key: 'day',
       fields: {
         day: {
@@ -31,7 +31,7 @@ export default class DayComponent extends BaseComponent {
 
   static get builderInfo() {
     return {
-      title: 'Day',
+      title: 'zh'===localStorage.getItem('language')?'日期':'Day',
       group: 'advanced',
       icon: 'fa fa-calendar',
       documentation: 'http://help.form.io/userguide/#day',

@@ -5,7 +5,7 @@ import BaseComponent from '../base/Base';
 export default class DataGridComponent extends NestedComponent {
   static schema(...extend) {
     return NestedComponent.schema({
-      label: 'Data Grid',
+      label: 'zh'===localStorage.getItem('language')?'数据网格':'Data Grid',
       key: 'dataGrid',
       type: 'datagrid',
       clearOnHide: true,
@@ -17,7 +17,7 @@ export default class DataGridComponent extends NestedComponent {
 
   static get builderInfo() {
     return {
-      title: 'Data Grid',
+      title: 'zh'===localStorage.getItem('language')?'数据网格':'Data Grid',
       icon: 'fa fa-th',
       group: 'data',
       documentation: 'http://help.form.io/userguide/#datagrid',
