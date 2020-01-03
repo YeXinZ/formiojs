@@ -96,7 +96,7 @@ export default class TableComponent extends NestedComponent {
               class: 'alert alert-info',
               style: 'text-align:center; margin-bottom: 0px;',
               role: 'alert'
-            }, this.text('Drag and Drop a form component')));
+            }, this.text('zh'===localStorage.getItem('language')?'拖放表单组件':'Drag and Drop a form component')));
           }
           this.root.addDragContainer(td, this, {
             onSave(component) {

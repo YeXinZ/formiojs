@@ -49,7 +49,7 @@ export default class WebformBuilder extends Webform {
               { attr: 'style', value: 'text-align:center;' },
               { attr: 'role', value: 'alert' }
             ],
-            content: 'Drag and Drop a form component'
+            content: 'zh'===localStorage.getItem('language')?'拖拽一个表单组件':'Drag and Drop a form component'
           }
         ];
       }
@@ -133,20 +133,20 @@ export default class WebformBuilder extends Webform {
   get defaultComponents() {
     return {
       basic: {
-        title: 'Basic Components',
+        title: 'zh'===localStorage.getItem('language')?'基础组件':'Basic Components',
         weight: 0,
         default: true,
       },
       advanced: {
-        title: 'Advanced',
+        title: 'zh'===localStorage.getItem('language')?'高级':'Advanced',
         weight: 10
       },
       layout: {
-        title: 'Layout',
+        title: 'zh'===localStorage.getItem('language')?'布局':'Layout',
         weight: 20
       },
       data: {
-        title: 'Data',
+        title: 'zh'===localStorage.getItem('language')?'数据':'Data',
         weight: 30
       }
     };
@@ -916,7 +916,7 @@ export default class WebformBuilder extends Webform {
     }).on('drop', (element, target, source, sibling) => this.onDrop(element, target, source, sibling));
 
     // If there are no components, then we need to add a default submit button.
-    this.addSubmitButton();
+    // this.addSubmitButton();
     this.builderReadyResolve();
   }
 

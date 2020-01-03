@@ -40,6 +40,46 @@ export default {
         cancel: 'Cancel',
         submit: 'Submit Form'
       }
+    },
+    zh: {
+      translation: {
+        complete: '提交完成',
+        error: '提交之前请更正以下错误',
+        required: '{{field}}必填',
+        pattern: '{{field}}不符合{{pattern}}',
+        minLength: '{{field}}必须大于{{length}}字符',
+        maxLength: '{{field}}必须小于{{length}}字符',
+        min: '{{field}}不能小于{{min}}.',
+        max: '{{field}}不能大于{{max}}.',
+        maxDate: '{{field}}不能包含{{- maxDate}}之后的日期',
+        minDate: '{{field}}不能包含{{- minDate}}之前的日期',
+        invalid_email: '{{field}}必须是一个有效的电子邮件', // eslint-disable-line camelcase
+        invalid_url: '{{field}}必须是一个有效的url', // eslint-disable-line camelcase
+        invalid_regex: '{{field}}不符合{{regex}}', // eslint-disable-line camelcase
+        invalid_date: '{{field}}不是一个有效的日期', // eslint-disable-line camelcase
+        invalid_day: '{{field}}不是一个有效的日期', // eslint-disable-line camelcase
+        mask: '{{field}}和掩码不匹配',
+        stripe: '{{stripe}}',
+        month: '月',
+        day: '天',
+        year: '年',
+        january: '一月',
+        february: '二月',
+        march: '三月',
+        april: '四月',
+        may: '五月',
+        june: '六月',
+        july: '七月',
+        august: '八月',
+        september: '九月',
+        october: '十月',
+        november: '十一月',
+        december: '十二月',
+        next: '下一个',
+        previous: '上一个',
+        cancel: '取消',
+        submit: '提交表单'
+      }
     }
   }
 };

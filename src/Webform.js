@@ -94,9 +94,10 @@ export default class Webform extends NestedComponent {
     }
 
     // Set the language.
-    if (this.options.language) {
-      this.options.i18n.lng = this.options.language;
-    }
+    // if (this.options.language) {
+    //   this.options.i18n.lng = this.options.language;
+    // }
+    this.options.i18n.lng = 'zh'===localStorage.getItem('language')?'zh':'en';
 
     /**
      * The type of this element.
