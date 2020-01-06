@@ -280,16 +280,16 @@ export default class WebformBuilder extends Webform {
     const saveButton = this.ce('button', {
       class: 'btn btn-success',
       style: 'margin-right: 10px;'
-    }, this.t('Save'));
+    }, 'zh'===localStorage.getItem('language')?'保存':'Save');
 
     const cancelButton = this.ce('button', {
       class: 'btn btn-default',
       style: 'margin-right: 10px;'
-    }, this.t('Cancel'));
+    }, 'zh'===localStorage.getItem('language')?'取消':'Cancel');
 
     const removeButton = this.ce('button', {
       class: 'btn btn-danger'
-    }, this.t('Remove'));
+    }, 'zh'===localStorage.getItem('language')?'移除':'Remove');
 
     const componentEdit = this.ce('div', {}, [
       this.ce('div', {
@@ -299,7 +299,7 @@ export default class WebformBuilder extends Webform {
           class: 'col col-sm-6'
         }, this.ce('p', {
           class: 'lead'
-        }, `${componentInfo.title} Component`)),
+        }, `${componentInfo.title}`)),
         this.ce('div', {
           class: 'col col-sm-6'
         }, [

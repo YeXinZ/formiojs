@@ -14,10 +14,16 @@ export default [
     dataSrc: 'custom',
     data: {
       custom() {
-        return _.map(Formio.providers.storage, (storage, key) => ({
-          label: storage.title,
-          value: key
-        }));
+        var list = [];
+        _.filter(Formio.providers.storage, (storage, key) => {
+          if (storage.title === 'Base64' || storage.title === 'Url') {
+            list.push({
+              label: storage.title,
+              value: key
+            });
+          }
+        });
+        return list;
       }
     }
   },

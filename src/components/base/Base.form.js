@@ -31,24 +31,24 @@ export default function(...extend) {
           weight: 20,
           components: BaseEditValidation
         },
-        {
-          label: 'API',
-          key: 'api',
-          weight: 30,
-          components: BaseEditAPI
-        },
+        // {
+        //   label: 'API',
+        //   key: 'api',
+        //   weight: 30,
+        //   components: BaseEditAPI
+        // },
         {
           label: 'Conditional',
           key: 'conditional',
           weight: 40,
           components: BaseEditConditional
         },
-        {
-          label: 'Logic',
-          key: 'logic',
-          weight: 50,
-          components: BaseEditLogic
-        }
+        // {
+        //   label: 'Logic',
+        //   key: 'logic',
+        //   weight: 50,
+        //   components: BaseEditLogic
+        // }
       ]
     }
   ]).concat(extend.map((items) => ({
