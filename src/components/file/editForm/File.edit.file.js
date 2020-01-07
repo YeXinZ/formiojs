@@ -34,7 +34,7 @@ export default [
     key: 'url',
     label: 'Url',
     weight: 10,
-    placeholder: `${window.location.protocol}//${window.location.hostname}${window.location.port?`:${window.location.port}`:''}/portaldatacollectionapi/CustomForm/Upload`,
+    placeholder: 'portaldatacollectionapi/CustomForm/Upload',
     tooltip: "See <a href='https://github.com/danialfarid/ng-file-upload#server-side' target='_blank'>https://github.com/danialfarid/ng-file-upload#server-side</a> for how to set up the server.",
     conditional: {
       json: { '===': [{ var: 'data.storage' }, 'url'] }

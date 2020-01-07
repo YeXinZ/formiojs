@@ -36,7 +36,7 @@ export default class FileComponent extends BaseComponent {
       fileMinSize: '0KB',
       fileMaxSize: '1GB',
       uploadOnly: false,
-      url: `${window.location.protocol}//${window.location.hostname}${window.location.port?`:${window.location.port}`:''}/portaldatacollectionapi/CustomForm/Upload`
+      url: 'portaldatacollectionapi/CustomForm/Upload'
     }, ...extend);
   }
 
@@ -99,7 +99,7 @@ export default class FileComponent extends BaseComponent {
     // Restore the value.
     this.restoreValue();
     if (this.component.storage === 'url') {
-      this.component.url = `${window.location.protocol}//${window.location.hostname}${window.location.port?`:${window.location.port}`:''}/portaldatacollectionapi/CustomForm/Upload`;
+      this.component.url = 'portaldatacollectionapi/CustomForm/Upload';
     }
 
     const labelAtTheBottom = this.component.labelPosition === 'bottom';
@@ -699,8 +699,6 @@ export default class FileComponent extends BaseComponent {
   }
 
   upload(files) {
-    console.log(33333);
-    console.log(this.component);
     // Only allow one upload if not multiple.
     if (!this.component.multiple) {
       files = Array.prototype.slice.call(files, 0, 1);
