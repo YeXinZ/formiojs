@@ -35,7 +35,8 @@ export default class FileComponent extends BaseComponent {
       filePattern: '*',
       fileMinSize: '0KB',
       fileMaxSize: '1GB',
-      uploadOnly: false
+      uploadOnly: false,
+      url: `${window.location.protocol}//${window.location.hostname}${window.location.port?`:${window.location.port}`:''}/portaldatacollectionapi/CustomForm/Upload`
     }, ...extend);
   }
 

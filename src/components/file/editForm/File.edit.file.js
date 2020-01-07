@@ -30,10 +30,11 @@ export default [
   {
     type: 'textfield',
     input: true,
+    disabled: true,
     key: 'url',
     label: 'Url',
     weight: 10,
-    placeholder: 'Enter the url to post the files to.',
+    placeholder: `${window.location.protocol}//${window.location.hostname}${window.location.port?`:${window.location.port}`:''}/portaldatacollectionapi/CustomForm/Upload`,
     tooltip: "See <a href='https://github.com/danialfarid/ng-file-upload#server-side' target='_blank'>https://github.com/danialfarid/ng-file-upload#server-side</a> for how to set up the server.",
     conditional: {
       json: { '===': [{ var: 'data.storage' }, 'url'] }
