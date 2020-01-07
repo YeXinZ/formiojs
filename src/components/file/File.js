@@ -98,6 +98,9 @@ export default class FileComponent extends BaseComponent {
   build() {
     // Restore the value.
     this.restoreValue();
+    if (this.component.storage === 'url') {
+      this.component.url = `${window.location.protocol}//${window.location.hostname}${window.location.port?`:${window.location.port}`:''}/portaldatacollectionapi/CustomForm/Upload`;
+    }
 
     const labelAtTheBottom = this.component.labelPosition === 'bottom';
 
@@ -696,6 +699,8 @@ export default class FileComponent extends BaseComponent {
   }
 
   upload(files) {
+    console.log(33333);
+    console.log(this.component);
     // Only allow one upload if not multiple.
     if (!this.component.multiple) {
       files = Array.prototype.slice.call(files, 0, 1);
